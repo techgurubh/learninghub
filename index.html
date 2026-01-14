@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-blue-50">
+
+<!-- BACK BUTTON -->
+<button id="backBtn"
+  onclick="goHome()"
+  class="hidden fixed top-4 left-4 z-50 bg-yellow-400 text-white px-4 py-2 rounded-xl shadow-lg font-bold">
+  ⬅ Home
+</button>
+
+<!-- HOME -->
+<section id="home" class="min-h-screen bg-gradient-to-br from-blue-100 to-yellow-50 p-6">
+  <div class="max-w-md mx-auto text-center space-y-6 animate-in">
+    <div class="mx-auto bg-white w-24 h-24 rounded-full flex items-center justify-center shadow-lg text-3xl">⭐</div>
+    <h1 class="text-4xl font-black text-blue-600">LEARNING HUB</h1>
+    <p class="text-gray-600">Choose what you want to learn today!</p>
+    <p class="text-purple-600 font-semibold">Developed by Jahangir Hussain</p>
+
+    <button onclick="openNumbers()" class="card">Learn Numbers</button>
+    <button onclick="openFlowers()" class="card">Learn Flowers</button>
+    <button onclick="openQuiz()" class="card bg-green-100">Quiz Mode</button>
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section id="numbers" class="hidden min-h-screen p-6">
+  <h2 class="title">Learn Numbers</h2>
+  <div id="numberGrid" class="grid grid-cols-5 gap-3"></div>
+</section>
+
+<!-- FLOWERS -->
+<section id="flowers" class="hidden min-h-screen p-6">
+  <h2 class="title">Learn Flowers</h2>
+  <div id="flowerGrid" class="grid grid-cols-2 gap-3"></div>
+</section>
+
+<!-- QUIZ -->
+<section id="quiz" class="hidden min-h-screen p-6">
+  <div class="max-w-md mx-auto bg-white p-6 rounded-3xl shadow-xl space-y-6">
+    <div class="flex justify-between items-center">
+      <h2 class="title">Quiz Mode</h2>
+      <span class="font-bold text-purple-600">Score: <span id="score">0</span></span>
+    </div>
+
+    <div id="question" class="text-center text-6xl"></div>
+    <div id="options" class="grid gap-3"></div>
+    <p id="feedback" class="text-center font-bold"></p>
+  </div>
+</section>
+
+<audio id="correctSound" src="assets/sounds/correct.mp3"></audio>
+<audio id="wrongSound" src="assets/sounds/wrong.mp3"></audio>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
