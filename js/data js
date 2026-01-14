@@ -1,0 +1,14 @@
+// Numbers
+function getNumberName(n){
+  const names = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+  return names[n];
+}
+
+// Flowers
+const flowers = [
+  { emoji:"🌹", name:"Rose" },
+  { emoji:"🌸", name:"Lotus" },
+  { emoji:"🌻", name:"Sunflower" },
+  { emoji:"🌼", name:"Marigold" },
+  { emoji:"🌺", name:"Hibiscus" }
+];
